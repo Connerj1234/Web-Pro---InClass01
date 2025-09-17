@@ -47,8 +47,16 @@ text-shadow: none;
 }
 #game-table {
 /* border removed as requested */
+border: 2px solid var(--table-color);
 text-align: center;
+height: 200px;
 width: 400px;
+}
+#caption {
+    text-transform: uppercase;
+    background-color: var(--table-color);
+    color: white;
+    padding: 10px;
 }
 table caption {
 color: white;
@@ -59,12 +67,22 @@ padding: 10px;
 tr:nth-child(even) {
 background-color: var(--row-bg-color);
 }
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+tr:hover {
+  background-color: #d1f0d1; /* light green shade */
+  cursor: pointer; /* changes the cursor when hovering */
+}
 </style>
 </head>
 <body>
 <h1>Yesterday - Best-Selling Video Games</h1>
-<table id="game-table">
-Best-Selling Video Games
+<div class="table-container" style="text-align: center;">
+<table id="game-table" >
+<caption id="caption"> Best-Selling Video Games </caption>
 <tr>
 <th>Title</th>
 <th>Sales</th>
@@ -91,8 +109,9 @@ Best-Selling Video Games
 <td>November 19, 2006</td>
 </tr>
 </table>
-<p>
-Source: https://en.wikipedia.org/wiki/List_of_best-selling_video_games
+</div>
+<p style="text-align: center;">
+Source: <a href = "https://en.wikipedia.org/wiki/List_of_best-selling_video_games">Wikipedia</a>
 </p>
 </body>
 </html>
